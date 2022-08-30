@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV xin viec</title>
+    <script src="https://kit.fontawesome.com/3d2c3d74d3.js" crossorigin="anonymous"></script>
+    <style>
+        :root{
+            --sod1: #A10136;
+            --trt: #a101361b;
+            --sod2:#6f0025;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .A4size{
+            width: 210mm;
+            height: 297mm;
+            background-color: white;
+            margin: 20px auto;
+            box-sizing: border-box;
+            box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+        body{
+            background-color: grey;
+        }
+        .side-bar{
+            width: 85mm;
+            height: 100%;
+            margin-left: 0mm;
+            background: var(--sod1);
+            box-shadow: 5px 0px 5px rgb(87, 87, 87);
+            position: absolute;
+        }
+        .shape-solid1{
+            width: 0mm;
+            height: 0mm;
+            border-top: 18mm solid var(--sod1); 
+            border-bottom: 18mm solid transparent;
+            border-left: 18mm solid var(--sod1);
+            border-right: 18mm solid transparent ;
+            right: 0mm;
+            position: absolute;
+            transform: rotate(90deg);
+        }
+        .shape-transparent1{
+            width: 0mm;
+            height: 0mm;
+            border-top: 18mm solid var(--trt); 
+            border-bottom: 18mm solid transparent;
+            border-left: 36mm solid transparent ;
+            border-right: 36mm solid var(--trt);
+            right: 0mm;
+            position: absolute;
+        }
+        .shape-transparent2{
+            width: 0mm;
+            height: 0mm;
+            border-top: 36mm solid var(--trt); 
+            border-bottom: 36mm solid transparent;
+            border-left: 18mm solid transparent ;
+            border-right: 18mm solid var(--trt) ;
+            right: 0mm;
+            position: absolute;
+        }
+        .shape-transparent3{
+            width: 0mm;
+            height: 0mm;
+            border-top: 72mm solid var(--trt); 
+            border-bottom: 72mm solid transparent;
+            border-left: 18mm solid transparent ;
+            border-right: 18mm solid var(--trt);
+            right: 0mm;
+            position: absolute;
+        }
+        .shape-solid2{
+            width: 0mm;
+            height: 45mm;
+            border-top: 15mm solid transparent; 
+            border-bottom: 15mm solid transparent;
+            border-left: 0mm solid transparent;
+            border-right: 85mm solid var(--sod2);
+            position: absolute;
+            top: 40mm;
+        }
+        .shape-solid3{
+            width: 0mm;
+            height: 150mm;
+            border-top: 0mm solid transparent; 
+            border-bottom:30mm solid transparent;
+            border-left: 0mm solid transparent;
+            border-right: 85mm solid var(--sod2);
+            position: absolute;
+            transform: rotate(180deg);
+            bottom: 0mm;
+        }
+        i{
+            color: white;
+        }
+        .side-bar-info{
+            color: white;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 3fr;
+            grid-template-columns: 20px 230px;
+            gap: 12px;
+            justify-content: center;
+            position: relative;
+        }
+        .side-bar-info>div:first-child{
+            grid-area: 1/1/2/3;
+            text-align: center;
+        }
+        .side-bar-info>i:nth-child(2){
+            grid-area: 2/1/3/2;
+            text-align: start;
+        }
+        .side-bar-info>i:nth-child(3){
+            grid-area: 3/1/4/2;
+            text-align: start;
+        }
+        .side-bar-info>i:nth-child(4){
+            grid-area: 4/1/5/2;
+            text-align: start;
+        }
+        .side-bar-info>i:nth-child(5){
+            grid-area: 5/1/6/2;
+            text-align: start;
+        }
+        .side-bar-info>i:nth-child(6){
+            grid-area: 6/1/7/3;
+            text-align: start;
+        }
+         .side-bar-info>div:nth-child(7){
+            grid-area: 2/2/3/3;
+            text-align: start;
+            margin-left: 6px;
+        }
+        .side-bar-info>div:nth-child(8){
+            grid-area: 3/2/4/3;
+            text-align: start;
+            margin-left: 6px;
+        }
+        .side-bar-info>div:nth-child(9){
+            grid-area: 4/2/5/3;
+            text-align: start;
+            margin-left: 6px;
+        }
+        .side-bar-info>div:nth-child(10){
+            grid-area: 5/2/6/3;
+            text-align: start;
+            margin-left: 6px;
+        }
+        .side-bar-info>div:nth-child(11){
+            grid-area: 6/2/7/3;
+            align-items: start;
+            margin-left: 6px;
+        }
+        .side-bar-info>div:nth-child(11)>p{
+            margin-top: 0px;
+            text-align: justify;
+        }
+        img{
+            width: 144px;
+            height: 180px;
+            object-fit: cover;
+            object-position: 100% 0;
+            border-radius: 9px;
+            margin: 60px auto;
+            display: block;
+            position: relative;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.381);
+        }
+        main{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 90%;
+            right: 40px;
+            top: 20px;
+            z-index: 1;
+            justify-content: space-around;
+        }
+        li{
+            text-align: justify;
+            padding: 5px 0px 5px 5px;
+        }
+        main>div{
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--sod1);
+        }
+        h4{
+            color: var(--sod1);
+        }
+        .side-bar>div:last-child{
+            position: relative;
+            top: 330px;
+            margin: 40px auto;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div class="A4size">
+        <div class="side-bar">
+            <div class="shape-solid2"></div>    
+            <div class="shape-solid3"></div>
+            <img src="anhdaidien.jpg" alt="avt">
+            <div class="side-bar-info">
+                <div style="font-size: 16px;"><b>VÕ TRƯỜNG GIANG</b></div>
+                <i class="fa-solid fa-face-grin"></i>
+                <i class="fa-solid fa-file-pen"></i>
+                <i class="fa-solid fa-mobile-retro"></i>
+                <i class="fa-solid fa-file-pen"></i>
+                <i class="fa-solid fa-mobile-retro"></i>
+                <div>Nam</div>
+                <div>12/08/1994</div>
+                <div>0397535170</div>
+                <div>votruonggiangbkdn@gmail.com</div>
+                <div><p>Số 100, đường Trần Tấn Mới, quận Hải Châu, thành phố Đà Nẵng.</p></div>
+            </div> 
+            <div><i><q>It is never too late to be what you might have been</q></i></div>
+        </div>
+        <main>
+            <div><h4>TRÌNH ĐỘ HỌC VẤN</h4>
+                <ul>
+                    <li>Trường Đại học Bách Khoa Đà Nẵng</li>
+                    <li>Năm tốt nghiệp: 2017</li>
+                    <li>Ngành: Kỹ thuật điện - Điện tử</li>
+                    <li>Loại: khá</li>
+                </ul>
+            </div>
+            <div><h4>CHỨNG CHỈ</h4>
+                <ul>
+                    <li>TOEIC: 500</li>
+                    <li>Sư phạm dạy nghề: Loại khá</li>
+                    <li>Tin học văn phòng: Loại khá</li>
+                </ul>
+            </div>
+            <div><h4>KINH NGHIỆM</h4>
+                <ul>
+                    <li>2017 U+2013 Làm việc tại công ty TNHH cơ điện Tuấn
+                        Huy ở vị trí nhân viên – Công việc lắp ráp tủ,
+                        thiết bị điện.</li>
+                    <li>2018 – Làm việc tại công ty TNHH TCIE ở vị trí
+                        giám sát kỹ thuật công nghiệp – Công việc giám
+                        sát, đánh giá tay nghề, năng suất lao động,
+                        tham gia cải tiến quy trình sản xuất, lắp ráp oto.</li>
+                    <li>2020 đến nay – Làm việc tại công ty TNHH
+                        Premo Việt Nam ở vị trí nhân viên bảo trì –
+                        Công việc bảo dưỡng sửa chữa máy, dây
+                        chuyền tự động, khuôn đúc… tham gia cải tiến
+                        quy trình, ngăn ngừa rủi ro.</li>
+                </ul>
+            </div>
+            <div><h4>KỸ NĂNG</h4>
+                <ul>
+                    <li>Tay nghề, phân tích, đánh giá, làm báo cáo,
+                        phân bố công việc, 5S, kaizen.</li>
+                </ul>
+            </div>
+            <div><h4>PHẦN MỀM</h4>
+                <ul>
+                    <li> Autocad, Solidworks, World, Excel,
+                        PowerPoint.</li>
+                </ul>
+            </div>
+        </main>
+        <div class="shape-solid1"></div>
+        <div class="shape-transparent1"></div>
+        <div class="shape-transparent2"></div>
+        <div class="shape-transparent3"></div>
+    </div>
+</body>
+</html>
